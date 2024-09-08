@@ -200,7 +200,7 @@ if __name__ == '__main__':
     
     if os.stat(RQ_PERSISTENCE_PATH).st_size != 0:
         with open(RQ_PERSISTENCE_PATH, 'rb') as file:
-            restored_queue = pickle.load(file)
+            request_queue = pickle.load(file)
         
     context = ssl.SSLContext(ssl.PROTOCOL_TLS)
     context.load_cert_chain('cert.pem', 'key.pem')
